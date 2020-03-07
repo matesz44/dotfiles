@@ -4,6 +4,8 @@
 [other scripts](https://github.com/matesz44/scripts)  
 [programs i use](https://github.com/matesz44/favtools)
 
+## And there is my desktop
+![rice](rice.png)
 
 # Whats inside this repo
 - `~/.aliasrc` (make things ez cuz im lazy af)
