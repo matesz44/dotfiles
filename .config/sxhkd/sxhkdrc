@@ -1,0 +1,46 @@
+# Basic binds
+super + Return
+	$TERMINAL
+super + r
+	$TERMINAL -e $FILE
+super + shift + m
+	spotify
+super + shift + n
+	discord
+super + c
+	$TERMINAL -e python
+super + w
+	$BROWSER
+super + n
+    joplin-desktop
+super + shift + b
+    wmname LG3D && java -jar ~/tools/burp/burpsuite_community_v2020.1.jar
+super + shift + a
+    pavucontrol
+
+
+# Et cetera...
+super + shift + x
+	prompt "Shutdown computer?" "sudo -A shutdown -h now"
+super + shift + BackSpace
+	prompt "Reboot computer?" "sudo -A reboot"
+super + x
+	slock
+
+# Take screenshot
+Print
+	maimpick
+
+# Mount a USB drive or Android device
+super + {F9,F10}
+	{dmenumount,dmenuumount}
+
+
+# Keyboard controlZ
+# pactl list sinks short to get the id
+# my headset is 1
+XF86Audio{Raise,Lower}Volume
+    pactl set-sink-mute 1 false ; pactl set-sink-volume 1 {+,-}5%
+XF86AudioMute
+    pactl set-sink-mute 1 toggle
+

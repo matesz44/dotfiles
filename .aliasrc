@@ -1,0 +1,55 @@
+# Aliases
+alias ls='ls --color=auto --group-directories-first'
+alias src='cd ~/.local/src/'
+alias burp='java -jar ~/tools/burp/burpsuite_community_v2020.1.jar'
+alias web='cd ~/hax/matesz44.github.io/'
+alias nmap='sudo nmap'
+
+
+#1337 H4XxX0R 4L14535
+
+#----- recon -----
+crtndstry(){
+~/tools/crtndstry/crtndstry $1
+}
+
+certspotter(){
+curl -s https://certspotter.com/api/v0/certs\?domain\=$1 | jq '.[].dns_names[]' | sed 's/\"//g' | sed 's/\*\.//g' | sort -u | grep $1
+}
+
+crtsh(){
+curl -s https://crt.sh/?q\=%.$1\&output\=json | jq -r '.[].name_value' | sed 's/\*\.//g' | sort -u
+}
+
+certnmap(){
+curl https://certspotter.com/api/v0/certs\?domain\=$1 | jq '.[].dns_names[]' | sed 's/\"//g' | sed 's/\*\.//g' | sort -u | grep $1  | nmap -T5 -Pn -sS -i - -$
+}
+
+ipinfo(){
+curl http://ipinfo.io/$1
+}
+
+
+#------ Tools ------
+dirsearch_ext(){
+python3 ~/tools/dirsearch/dirsearch.py -u $1 -e $2 -t 50 -b
+} #runs dirsearch and takes host and extension as arguments
+
+sqlmap(){
+python ~/tools/sqlmap*/sqlmap.py -u $1
+}
+
+ncx(){
+nc -l -n -vv -p $1
+}
+
+crtshdirsearch(){
+curl -s https://crt.sh/?q\=%.$1\&output\=json | jq -r '.[].name_value' | sed 's/\*\.//g' | sort -u | httprobe -c 50 | grep https | xargs -n1 -I{} python3 ~/tools/dirsearch/dirsearch.py -u {} -e $2 -t 50 -b
+} #gets all domains from crtsh, runs httprobe and then dir bruteforcers
+
+dsearch_med(){
+python3 ~/tools/dirsearch/dirsearch.py -u $1 -w ~/tools/wordlists/directory-list-2.3-medium.txt -e $2 -t 50
+}
+dsearch_comm(){
+python3 ~/tools/dirsearch/dirsearch.py -u $1 -w ~/tools/wordlists/common.txt -e $2 -t 50
+}
