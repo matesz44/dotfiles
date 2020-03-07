@@ -1,4 +1,4 @@
-xwallpaper --zoom $HOME/dox/pix/wall/wall1.png &
+xwallpaper --zoom $HOME/.config/wall.png &
 sxhkd &
 dunst &
 slstatus &

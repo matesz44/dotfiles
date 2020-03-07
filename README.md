@@ -7,6 +7,10 @@
 ## And there is my desktop
 ![rice](rice.png)
 
+### My wallpaper
+![wallpaper](.config/wall.png)
+
+
 # Whats inside this repo
 - `~/.aliasrc` (make things ez cuz im lazy af)
 - `~/.xinitrc` (*startx* executes these)
