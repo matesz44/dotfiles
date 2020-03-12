@@ -1,0 +1,27 @@
+[global_config]
+  borderless = True
+  dbus = False
+  extra_styling = False
+  focus = mouse
+  suppress_multiple_term_dialog = True
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+    font = Noto Sans Mono Regular 11
+    icon_bell = False
+    foreground_color = "#ffffff"
+    palette = "#000000:#d54e53:#b9ca4a:#e6c547:#7aa6da:#c397d8:#70c0ba:#eaeaea:#666666:#ff3334:#9ec400:#e7c547:#7aa6da:#b77ee0:#54ced6:#ffffff"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False

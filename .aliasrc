@@ -4,6 +4,7 @@ alias src='cd ~/.local/src/'
 alias burp='java -jar ~/tools/burp/burpsuite_community_v2020.1.jar'
 alias web='cd ~/hax/matesz44.github.io/'
 alias nmap='sudo nmap'
+alias htb='cd ~/hax/wargames/htb/boxes/'
 
 
 #1337 H4XxX0R 4L14535

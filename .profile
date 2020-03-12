@@ -1,8 +1,9 @@
 export PATH=${PATH}:~/.local/bin/:~/.gem/ruby/2.7.0/bin/:~/go/bin/
 
 export EDITOR="vim"
-export TERMINAL="alacritty"
-export BROWSER="chromium"
+#export TERMINAL="alacritty"
+export TERMINAL="terminator"
+export BROWSER="firefox"
 export READER="mupdf"
 export FILE="nnn"
 
