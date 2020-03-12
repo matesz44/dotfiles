@@ -21,3 +21,4 @@
 - `~/.config/fontconfig/fonts.conf` (custom fonts in the system)
 - `~/.config/sxhkd/sxhkdrc` (keyboard shortcuts for dwm)
 - `~/.config/zathura/zathurarc` (my pdf viewer's config file)
+- `~/.config/terminator/config` (terminator config file)
