@@ -11,10 +11,12 @@ super + c
 	$TERMINAL -e python
 super + w
 	$BROWSER
+super + shift + w
+    dmenuwifi
 super + n
-    joplin-desktop
+    joplin --no-sandbox
 super + shift + b
-    wmname LG3D && java -jar ~/tools/burp/burpsuite_community_v2020.1.jar
+    burpsuite
 super + shift + a
     pavucontrol
 
@@ -26,6 +28,8 @@ super + shift + BackSpace
 	prompt "Reboot computer?" "sudo -A reboot"
 super + x
 	slock
+super + d
+    notify-send -t 10000 "CALENDAR" "$(ncal -h)"
 
 # Take screenshot
 Print
