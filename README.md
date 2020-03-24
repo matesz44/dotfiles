@@ -1,4 +1,4 @@
-# My dotfiles for my arch dwm setup
+# My dotfiles for my `kali gnu/linux` dwm setup
 [dwm config](https://github.com/matesz44/dwm)  
 [slstatus config](https://github.com/matesz44/slstatus)  
 [other scripts](https://github.com/matesz44/scripts)  
@@ -8,7 +8,7 @@
 ![rice](rice.png)
 
 ### My wallpaper
-![wallpaper](.config/wall.png)
+![wallpaper](.config/wall3.jpg)
 
 
 # Whats inside this repo
