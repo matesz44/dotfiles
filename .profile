@@ -1,13 +1,12 @@
 export PATH=${PATH}:~/.local/bin/:~/.gem/ruby/2.7.0/bin/:~/go/bin/
 
 export EDITOR="vim"
-#export TERMINAL="alacritty"
 export TERMINAL="terminator"
 export BROWSER="firefox"
 export READER="mupdf"
 export FILE="nnn"
 
-export SUDO_ASKPASS="/home/matesz/.local/bin/dmenupass"
+export SUDO_ASKPASS="/usr/local/bin/dmenupass"
 # Burp weird font fix
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 # Ghidra blank screen fix

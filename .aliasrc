@@ -1,11 +1,14 @@
 # Aliases
-alias ls='ls --color=auto --group-directories-first'
-alias src='cd ~/.local/src/'
-alias burp='java -jar ~/tools/burp/burpsuite_community_v2020.1.jar'
-alias web='cd ~/hax/matesz44.github.io/'
-alias nmap='sudo nmap'
-alias htb='cd ~/hax/wargames/htb/boxes/'
 
+alias v='vim'
+alias nmap='grc nmap'
+alias burp='java -jar ~/tools/burp/burpsuite_community_v2020.1.jar'
+alias ls='ls --color=auto --group-directories-first'
+alias src='cd /usr/local/src/'
+alias web='cd ~/dox/github/matesz44.github.io/'
+alias htb='cd ~/hax/wargames/htb && tree $(pwd) -L 2'
+alias pyhttp='sudo python3 -m http.server 80'
+alias impacket='cd /usr/share/doc/python3-impacket/examples/'
 
 #1337 H4XxX0R 4L14535
 
@@ -36,10 +39,6 @@ dirsearch_ext(){
 python3 ~/tools/dirsearch/dirsearch.py -u $1 -e $2 -t 50 -b
 } #runs dirsearch and takes host and extension as arguments
 
-sqlmap(){
-python ~/tools/sqlmap*/sqlmap.py -u $1
-}
-
 ncx(){
 nc -l -n -vv -p $1
 }
@@ -48,9 +47,18 @@ crtshdirsearch(){
 curl -s https://crt.sh/?q\=%.$1\&output\=json | jq -r '.[].name_value' | sed 's/\*\.//g' | sort -u | httprobe -c 50 | grep https | xargs -n1 -I{} python3 ~/tools/dirsearch/dirsearch.py -u {} -e $2 -t 50 -b
 } #gets all domains from crtsh, runs httprobe and then dir bruteforcers
 
+
+## Directory/file fuzzing
 dsearch_med(){
-python3 ~/tools/dirsearch/dirsearch.py -u $1 -w ~/tools/wordlists/directory-list-2.3-medium.txt -e $2 -t 50
+python3 ~/tools/dirsearch/dirsearch.py -u $1 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e $2 -t 50
 }
 dsearch_comm(){
-python3 ~/tools/dirsearch/dirsearch.py -u $1 -w ~/tools/wordlists/common.txt -e $2 -t 50
+python3 ~/tools/dirsearch/dirsearch.py -u $1 -w /usr/share/wordlists/dirb/common.txt -e $2 -t 50
+}
+
+ffuf_med(){
+ffuf -u $1 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 80
+}
+ffuf_comm(){
+ffuf -u $1 -w /usr/share/wordlists/dirb/common.txt -t 80
 }
