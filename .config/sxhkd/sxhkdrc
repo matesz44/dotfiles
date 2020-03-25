@@ -28,7 +28,7 @@ super + shift + BackSpace
 	prompt "Reboot computer?" "sudo -A reboot"
 super + x
 	slock
-super + d
+super + shift + c
     notify-send -t 10000 "CALENDAR" "$(ncal -h)"
 
 # Take screenshot
