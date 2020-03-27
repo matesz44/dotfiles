@@ -1,7 +1,7 @@
 export PATH=${PATH}:~/.local/bin/:~/.gem/ruby/2.7.0/bin/:~/go/bin/
 
 export EDITOR="vim"
-export TERMINAL="terminator"
+export TERMINAL="st"
 export BROWSER="firefox"
 export READER="zathura"
 export FILE="nnn"
