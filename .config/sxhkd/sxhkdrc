@@ -1,6 +1,8 @@
 # Basic binds
 super + Return
 	$TERMINAL
+alt + Return
+    tabbed -r 2 $TERMINAL -w ''
 super + r
 	$TERMINAL -e $FILE
 super + shift + m
