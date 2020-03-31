@@ -3,7 +3,6 @@
 alias v='vim'
 alias nmap='grc nmap'
 alias ping='grc ping'
-alias burp='java -jar ~/tools/burp/burpsuite_community_v2020.1.jar'
 alias ls='ls --color=auto --group-directories-first'
 alias src='cd /usr/local/src/'
 alias web='cd ~/dox/github/matesz44.github.io/'

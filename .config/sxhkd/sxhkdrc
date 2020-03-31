@@ -1,20 +1,23 @@
 # Basic binds
-super + Return
-	$TERMINAL
 alt + Return
+	$TERMINAL
+super + Return
     tabbed -r 2 $TERMINAL -w ''
 super + r
 	$TERMINAL -e $FILE
+
+# Social
 super + shift + m
 	spotify
 super + shift + n
 	discord
+# Tools
 super + c
 	$TERMINAL -e python
 super + w
 	$BROWSER
 super + shift + w
-    dmenuwifi
+    dmenunet
 super + n
     joplin --no-sandbox
 super + shift + b
