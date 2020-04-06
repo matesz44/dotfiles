@@ -19,7 +19,9 @@ super + w
 super + shift + w
     dmenunet
 super + n
-    joplin --no-sandbox
+    ~/dox/dow/Joplin* --no-sandbox
+super + shift + p
+    ~/dox/dow/Bitwarden* --no-sandbox
 super + shift + b
     burpsuite
 super + shift + a

@@ -1,6 +1,8 @@
 # My dotfiles for my `kali gnu/linux` dwm setup
 [dwm config](https://github.com/matesz44/dwm)  
 [slstatus config](https://github.com/matesz44/slstatus)  
+[st config](https://github.com/matesz44/st_)  
+[tabbed config](https://github.com/matesz44/tabbed)  
 [other scripts](https://github.com/matesz44/scripts)  
 [programs i use](https://github.com/matesz44/favtools)
 
