@@ -1,1 +1,1 @@
-source /opt/peda/peda.py
+source /opt/gef/gef.py

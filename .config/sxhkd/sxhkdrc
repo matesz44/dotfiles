@@ -41,6 +41,8 @@ super + shift + c
 # Take screenshot
 Print
 	maimpick
+shift + Print
+    flameshot gui
 
 # Mount a USB drive or Android device
 super + {F9,F10}

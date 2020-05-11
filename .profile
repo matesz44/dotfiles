@@ -11,6 +11,8 @@ export SUDO_ASKPASS="/usr/local/bin/dmenupass"
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 # Ghidra blank screen fix
 export _JAVA_AWT_WM_NONREPARENTING=1
+# QT dark style
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 # ~/ Clean up:
 export LESSHISTFILE="-"
