@@ -4,7 +4,9 @@
 [st config](https://github.com/matesz44/st_)  
 [tabbed config](https://github.com/matesz44/tabbed)  
 [other scripts](https://github.com/matesz44/scripts)  
-[programs i use](https://github.com/matesz44/favtools)
+[programs i use](https://github.com/matesz44/favtools)  
+[joplin custom css](https://github.com/matesz44/joplintheme)
+
 
 ## And there is my desktop
 ![rice](rice.png)
