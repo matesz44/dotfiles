@@ -12,8 +12,10 @@ super + shift + m
 super + shift + n
 	discord
 # Tools
+super + e
+    code
 super + c
-	$TERMINAL -e python
+	$TERMINAL -e python3
 super + w
 	$BROWSER
 super + shift + w
@@ -40,9 +42,9 @@ super + shift + c
 
 # Take screenshot
 Print
-	maimpick
-shift + Print
     flameshot gui
+shift + Print
+	maimpick
 
 # Mount a USB drive or Android device
 super + {F9,F10}

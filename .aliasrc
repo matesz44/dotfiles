@@ -37,11 +37,11 @@ curl http://ipinfo.io/$1
 
 #------ Tools ------
 dirsearch_ext(){
-python3 ~/tools/dirsearch/dirsearch.py -u $1 -e $2 -t 50 -b
+python3 /opt/dirsearch/dirsearch.py -u $1 -e $2 -t 50 -b
 } #runs dirsearch and takes host and extension as arguments
 
 ncx(){
-nc -l -n -vv -p $1
+rlwrap nc -l -n -vv -p $1
 }
 
 crtshdirsearch(){
@@ -51,10 +51,10 @@ curl -s https://crt.sh/?q\=%.$1\&output\=json | jq -r '.[].name_value' | sed 's/
 
 ## Directory/file fuzzing
 dsearch_med(){
-python3 ~/tools/dirsearch/dirsearch.py -u $1 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e $2 -t 50
+python3 /opt/dirsearch/dirsearch.py -u $1 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e $2 -t 50
 }
 dsearch_comm(){
-python3 ~/tools/dirsearch/dirsearch.py -u $1 -w /usr/share/wordlists/dirb/common.txt -e $2 -t 50
+python3 /opt/dirsearch/dirsearch.py -u $1 -w /usr/share/wordlists/dirb/common.txt -e $2 -t 50
 }
 
 ffuf_med(){
