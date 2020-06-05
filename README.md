@@ -12,13 +12,15 @@
 ![rice](rice.png)
 
 ### My wallpaper
-![wallpaper](.config/wall3.jpg)
+![wallpaper1](.config/wall3.jpg)  
+![wallpaper2](.config/wall5.jpg)
 
 
 # Whats inside this repo
 - `~/.aliasrc` (make things ez cuz im lazy af)
 - `~/.xinitrc` (*startx* executes these)
-- `~/.vimrc` (my vim config (no plugins = no mess))
+- `~/.vimrc_no_plugins` (my vim config (no plugins = no mess))
+- `~/.vimrc` (my vim config (with plugins now))
 - `~/.profile` (default shell vars for programs i use)
 - `~/.bashrc` (load ~/.aliasrc)
 - `~/.config/dunst/dunstrc` (fancy notifications)
