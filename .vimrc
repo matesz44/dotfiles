@@ -21,7 +21,7 @@ set showbreak=+++
 " Coc needed
 set hidden
 set cmdheight=2
-set updatetime=300
+set updatetime=100
 set shortmess+=c
 "
 
@@ -30,9 +30,10 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
+Plug 'sheerun/vim-polyglot'
 Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -43,6 +44,7 @@ Plug 'ferrine/md-img-paste.vim'
 
 call plug#end()
 
+let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 set background=dark
 
@@ -65,22 +67,21 @@ nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <Leader>ps :Rg<SPACE>
-nnoremap <C-P> :Files<CR>
+nnoremap <Leader>tn :tabnew<SPACE>
+nnoremap <C-p> :GFiles<CR>
+nnoremap <Leader>pf :Files<CR>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
 map <F6> <Esc>:set wrap!<CR>
 nmap <Leader>b :!echo <C-R><C-W> \| base64 -d<CR>
 
+nnoremap <C-j> :tabp<CR>
+nnoremap <C-k> :tabn<CR>
+
 autocmd FileType markdown nnoremap <buffer><silent> <C-I> :call mdip#MarkdownClipboardImage()<CR>
 
 " --- COC ---
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -89,11 +90,17 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <silent><expr> <c-space> coc#refresh()
 
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+" GoTo code navigation.
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gy <Plug>(coc-type-definition)
+nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gr <Plug>(coc-references)
+nmap <leader>rr <Plug>(coc-rename)
+nnoremap <leader>cr :CocRestart
