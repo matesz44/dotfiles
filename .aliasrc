@@ -1,6 +1,7 @@
 # Aliases
 
 alias v='vim'
+alias vd='vimdiff'
 alias nmap='grc nmap'
 alias ping='grc ping'
 alias ls='ls --color=auto --group-directories-first'
