@@ -30,17 +30,16 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'gruvbox-community/gruvbox'
-Plug 'jremmen/vim-ripgrep'
-Plug 'tpope/vim-fugitive'
-Plug 'sheerun/vim-polyglot'
-Plug 'vim-utils/vim-man'
-Plug 'lyuts/vim-rtags'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mbbill/undotree'
+Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ferrine/md-img-paste.vim'
+Plug 'vim-utils/vim-man'
+Plug 'lyuts/vim-rtags'
+Plug 'mbbill/undotree'
+Plug 'jremmen/vim-ripgrep'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
@@ -52,7 +51,6 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let mapleader = " "
 let g:netrw_browse_split=2
 let g:netrw_banner = 0
@@ -70,6 +68,7 @@ nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <Leader>tn :tabnew<SPACE>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>pf :Files<CR>
+nnoremap <leader>f :Goyo<CR>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
