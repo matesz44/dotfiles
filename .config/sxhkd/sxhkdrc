@@ -11,6 +11,7 @@ super + shift + m
 	spotify
 super + shift + n
 	discord
+
 # Tools
 super + e
     code
@@ -28,9 +29,10 @@ super + shift + b
     burpsuite
 super + shift + a
     pavucontrol
+super + t
+    todo
 
-
-# Et cetera...
+# System stuff
 super + shift + x
 	prompt "Shutdown computer?" "sudo -A shutdown -h now"
 super + shift + BackSpace
@@ -46,10 +48,13 @@ Print
 shift + Print
 	maimpick
 
+# Video recording
+super + shift + r
+    dmenurecord
+
 # Mount a USB drive or Android device
 super + {F9,F10}
 	{dmenumount,dmenuumount}
-
 
 # Keyboard controlZ
 # pactl list sinks short to get the id
@@ -58,4 +63,3 @@ XF86Audio{Raise,Lower}Volume
     pactl set-sink-mute 1 false ; pactl set-sink-volume 1 {+,-}5%
 XF86AudioMute
     pactl set-sink-mute 1 toggle
-
