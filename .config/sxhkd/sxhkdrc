@@ -29,7 +29,7 @@ super + shift + b
     burpsuite
 super + shift + a
     pavucontrol
-super + t
+super + shift + t
     todo
 
 # System stuff
