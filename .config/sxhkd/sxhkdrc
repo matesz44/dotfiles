@@ -1,8 +1,8 @@
 # Basic binds
 alt + Return
-	$TERMINAL
-super + Return
     tabbed -r 2 $TERMINAL -w ''
+#super + Return
+#    tabbed -r 2 $TERMINAL -w ''
 super + r
 	$TERMINAL -e $FILE
 
@@ -22,13 +22,13 @@ super + w
 super + shift + w
     dmenunet
 super + n
-    ~/dox/dow/Joplin* --no-sandbox
+    $TERMINAL -e newsboat
 super + shift + p
     ~/dox/dow/Bitwarden* --no-sandbox
 super + shift + b
     burpsuite
 super + shift + a
-    pavucontrol
+    $TERMINAL -e pulsemixer
 super + shift + t
     todo
 

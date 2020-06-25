@@ -16,17 +16,12 @@ dunst &
 # Custom statusbar for dwm
 slstatus &
 
-# Hungarian keyboard layout
-setxkbmap hu &
+# Hungarian keyboard layout + remaps
+setxkbmap us -option caps:escape,altwin:menu_win &
 
 # Screenshooter tool
 flameshot &
 
-# Mapping keys 
-setxkbmap -option caps:escape,altwin:menu_win &
-
-# Keyboar speed tuning
-#xset r rate 300 50 &
 
 # Window manager
 exec dwm

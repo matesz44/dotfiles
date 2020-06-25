@@ -73,6 +73,7 @@ nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
 map <F6> <Esc>:set wrap!<CR>
+map <F7> <Esc>:set paste!<CR>
 nmap <Leader>b :!echo <C-R><C-W> \| base64 -d<CR>
 
 nnoremap <C-j> :tabp<CR>
