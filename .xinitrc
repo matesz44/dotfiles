@@ -4,7 +4,7 @@
 wmname LG3D &
 
 # Fancy Wallpaper
-xwallpaper --zoom $HOME/.config/wall3.jpg &
+xwallpaper --zoom $HOME/.config/wall10.png &
 #xwallpaper --output HDMI-0 --zoom ~/.config/wall3.jpg --output VGA-0 --zoom ~/.config/wall5.jpg &
 
 # Hotkey daemon
@@ -20,7 +20,7 @@ slstatus &
 setxkbmap us -option caps:escape,altwin:menu_win &
 
 # Screenshooter tool
-flameshot &
+# flameshot &
 
 
 # Window manager

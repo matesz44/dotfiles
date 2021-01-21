@@ -9,6 +9,8 @@ function tun0_ip() {
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-[[ -f ~/.aliasrc ]] && . ~/.aliasrc
+[[ -f ~/.config/aliasrc ]] && . ~/.config/aliasrc
 #PS1='[\u@\h \W]\$ '
 PS1='\[\e[1;36m\][\u@\h] \[\e[1;35m\]$(tun0_ip) \[\e[1;33m\]\W\[\e[1;0m\]\$ '
+export GOPATH=$HOME/go
+PATH=$GOPATH/bin:$PATH

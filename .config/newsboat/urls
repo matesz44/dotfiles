@@ -1,3 +1,5 @@
+-------------PEERTUBE--------------
+https://videos.lukesmith.xyz/feeds/videos.xml?videoChannelId=2 "~Luke's peertube"
 --------------YOUTUBE--------------
 https://www.youtube.com/feeds/videos.xml?channel_id=UCa6eh7gCkpPo5XXUDfygQQA "~IppSec"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVeW9qkBjo3zosnqUbG7CFw "~JohnHammond"
@@ -21,11 +23,10 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCFzGyNKXPAglNq28qWYTDFA "~K
 https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw "~ThePrimeagen"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCk9NvmsPBC3lTn_L9kFaylA "~iBSD"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCkXZcdClprjcI4gWeFuB7Qw "~Zsozeatya"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC7ivXUYaRoZb5WDLKksETUA "~Puzser Robert"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC_3MGLc67y2hczlR19fYy-Q "~Sythex"
-https://www.youtube.com/feeds/videos.xml?user=fleXTheConsoleGuy "~fleX"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC8JNIm02zw8h_3NBrP_zsZA "~Andrew Kirby"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCo1NHk_bgbAbDBc4JinrXww "~Bugcrowd"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8nq3PX9coMiqgKH6fw-VCQ "~Red Team Village"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCPiN9NPjIer8Do9gUFxKv7A "~InsiderPhD"
 
 --------------REDDIT---------------
 https://reddit.com/r/hackthebox.rss "~HackTheBox"
@@ -35,11 +36,26 @@ https://reddit.com/r/openbsd.rss "~OpenBSD"
 --------------PODCASTS-------------
 https://rss.simplecast.com/podcasts/9661/rss
 https://notrelated.libsyn.com/rss
+https://anchor.fm/s/2b9c0f9c/podcast/rss "~PitcastPodcast"
 
 --------------Forums---------------
 http://lukesmith.xyz/rss.xml
 https://www.archlinux.org/feeds/news/ "tech"
 
 --------------Blogs----------------
+https://0xpatrik.com/rss/ "~0xpatrik.com"
 https://www.omnycontent.com/d/playlist/1439345f-6152-486d-a9c2-a6bf0067f2b7/3ba9af7f-3bfb-48fd-aae7-a6bf00689c10/fde26e49-9fb8-457d-8f16-a6bf00696676/podcast.rss "~TroyHunt"
 https://danielmiessler.com/feed/ "~Daniel Miessler (creator of seclists)"
+https://0xdf.gitlab.io/feed.xml "~0xdf hacks stuff"
+https://m4t3sz.gitlab.io/index.xml "~My hugo blog"
+https://optionalctf.com/rss/ "~OptionalCTF"
+https://bitlords.hu/feed/ "~BitLordsHU"
+https://t4r0.gitlab.io/index.xml "~T4r0"
+
+--------------EXPLOITS-------------
+https://www.exploit-db.com/rss.xml "~exploit-db"
+https://cxsecurity.com//wlb/rss/exploit/ "~cxsecurity"
+
+
+--------------GIT------------------
+https://gitlab.com/rwxrob.atom?feed_token=Na86KXJLPNZWSguhnWfk "~rwxrob"

@@ -1,0 +1,53 @@
+# Aliases
+
+alias sc='source $HOME/.profile'
+alias v='vim'
+alias vd='vimdiff'
+alias nmap='sudo grc nmap'
+alias ping='grc ping'
+alias ls='ls --color=auto --group-directories-first'
+alias src='cd /usr/local/src/'
+alias web='cd $HOME/dox/git/own/sites/'
+alias htb='cd ~/hax/wargames/htb && tree $(pwd) -L 2'
+alias sch='cd $HOME/dox/learn/school/'
+alias pyhttp='sudo python3 -m http.server'
+alias impacket='cd /usr/share/doc/python3-impacket/examples/'
+
+#1337 H4XxX0R 4L14535
+
+#----- recon -----
+crtndstry(){
+~/tools/crtndstry/crtndstry $1
+}
+
+certspotter(){
+curl -s "https://certspotter.com/api/v0/certs?domain=$1" | jq '.[].dns_names[]' | sed 's/\"//g' | sed 's/\*\.//g' | sort -u | grep $1
+}
+
+crtsh(){
+curl -s "https://crt.sh/?q=%25.$1&output=json" | jq -r '.[].name_value' | sed 's/\*\.//g' | sort -u
+}
+
+certnmap(){
+curl "https://certspotter.com/api/v0/certs?domain=$1" | jq '.[].dns_names[]' | sed 's/\"//g' | sed 's/\*\.//g' | sort -u | grep $1  | nmap -T5 -Pn -sS -i - -$
+}
+
+ipinfo(){
+curl "http://ipinfo.io/$1"
+}
+
+crtshdirsearch(){
+curl -s "https://crt.sh/?q=%.$1&output=json" | jq -r '.[].name_value' | sed 's/\*\.//g' | sort -u | httprobe -c 50 | grep https | xargs -n1 -I{} python3 ~/tools/dirsearch/dirsearch.py -u {} -e $2 -t 50 -b
+} #gets all domains from crtsh, runs httprobe and then dir bruteforcers
+
+ffuf_med(){
+ffuf -u $1 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 80
+}
+ffuf_comm(){
+ffuf -u $1 -w /usr/share/wordlists/dirb/common.txt -t 80
+}
+
+#------ Tools ------
+ncx(){
+rlwrap nc -l -n -vv -p $1
+}

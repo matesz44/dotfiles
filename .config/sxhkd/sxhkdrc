@@ -1,8 +1,8 @@
 # Basic binds
+#alt + Return
+#    terminator
 alt + Return
     tabbed -r 2 $TERMINAL -w ''
-#super + Return
-#    tabbed -r 2 $TERMINAL -w ''
 super + r
 	$TERMINAL -e $FILE
 
@@ -13,8 +13,6 @@ super + shift + n
 	discord
 
 # Tools
-super + e
-    code
 super + c
 	$TERMINAL -e python3
 super + w
@@ -23,6 +21,8 @@ super + shift + w
     dmenunet
 super + n
     $TERMINAL -e newsboat
+alt + shift + c
+    $TERMINAL -e calcurse
 super + shift + p
     ~/dox/dow/Bitwarden* --no-sandbox
 super + shift + b
@@ -31,6 +31,8 @@ super + shift + a
     $TERMINAL -e pulsemixer
 super + shift + t
     todo
+super + e
+    dmenuunicode
 
 # System stuff
 super + shift + x
@@ -41,12 +43,14 @@ super + x
 	slock
 super + shift + c
     notify-send -t 10000 "CALENDAR" "$(ncal -h)"
+super + shift + i
+    echo -n $(ip addr show tun0 2> /dev/null | grep -Po 'inet \K[\d.]+') | xclip -selection clipboard
 
 # Take screenshot
-Print
-    flameshot gui
-shift + Print
-	maimpick
+#Print
+#    flameshot gui
+#shift + Print
+#	maimpick
 
 # Video recording
 super + shift + r
