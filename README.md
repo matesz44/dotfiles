@@ -18,7 +18,7 @@
 
 
 # Whats inside this repo
-- `~/.aliasrc` (make things ez cuz im lazy af)
+- `~/.config/aliasrc` (make things ez cuz im lazy af)
 - `~/.xinitrc` (*startx* executes these)
 - `~/.vimrc_no_plugins` (my vim config (no plugins = no mess))
 - `~/.vimrc` (my vim config (with plugins now))
@@ -28,6 +28,9 @@
 - `~/.config/fontconfig/fonts.conf` (custom fonts in the system)
 - `~/.config/sxhkd/sxhkdrc` (keyboard shortcuts for dwm)
 - `~/.config/zathura/zathurarc` (my pdf viewer's config file)
-- `~/.config/terminator/config` (terminator config file)
+- `~/.config/zsh` (zsh config)
+- `~/.config/qutebrowser` (qutebrowser config - gruvbox colors)
+- `~/.config/newsboat` (rss reader config files)
+- `~/.config/terminator/config` (terminator config file) - not used anymore
 - `~/.tmux.conf` (tmux configuration)
 - `~/.gdbinit` (download [peda](https://github.com/longld/peda) to /opt/)
